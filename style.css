@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Baskerville", "Montserrat", "sans-serif", "serif";
+}
+h2 {
+  font-family: "Libre Baskerville";
+  font-size: 32px;
+}
+p {
+  font-family: "Montserrat";
+  font-size: 18px;
+}
+
+/* Logo en tete */
+
+.logo {
+  display: flex;
+  background-color: white;
+  height: 160px;
+}
+.logo-image img {
+  height: 120px;
+  margin: 20px;
+  margin-left: 50px;
+}
+.logo-titre {
+  display: inline;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+.logo-titre h1 {
+  font-size: 30px;
+  margin-bottom: 2px;
+  color: rgb(73, 55, 9);
+  font-family: "Libre Baskerville";
+}
+.logo-titre p {
+  font-size: 16px;
+  margin: 0;
+  font-style: italic;
+  color: rgb(73, 55, 9);
+  font-family: "Libre Baskerville";
+}
+
+/* Menu */
+
+.menu {
+  position: sticky;
+  background-color: rgb(255, 228, 193);
+  display: flex;
+  height: 35px;
+  top: 0;
+  right: 0;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Libre Baskerville";
+  box-shadow: 0px 5px 8px rgba(56, 56, 56, 0.521);
+  z-index: 1000;
+}
+.menu-nav ul {
+  list-style: none;
+  padding-left: 40px;
+}
+.menu-nav li {
+  display: inline-block;
+  cursor: pointer;
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+}
+.menu-nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(73, 55, 9);
+  padding: 0 12px;
+}
+.menu-nav a:hover {
+  color: goldenrod;
+  transition-duration: 0.2s;
+}
+.menu-info {
+  display: flex;
+  color: rgb(73, 55, 9);
+  justify-content: space-around;
+  padding-right: 20px;
+}
+
+.menu-info p {
+  margin: 22px 0;
+  font-size: 14px;
+}
+.menu-info div {
+  margin: 20px 15px 17.5px 30px;
+}
+.menu-info i {
+  padding-right: 10px;
+  font-size: 20px;
+  color: rgb(73, 55, 9);
+}
+.menu-info i:hover {
+  color: goldenrod;
+  transition-duration: 0.2s;
+}
+
+/* Header */
+
+header {
+  clear: both;
+  display: block;
+  position: relative;
+  height: 500px;
+  background: no-repeat center center / cover url(ressources/header.jpg);
+  background-position: top;
+  background-attachment: fixed;
+}
+
+header .entete {
+  position: absolute;
+  justify-content: center;
+  font-family: "Libre Baskerville";
+}
+.entete h1 {
+  margin: 140px 50px 10px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 50px;
+}
+.entete p {
+  margin: 0px 50px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 20px;
+  font-style: italic;
+}
+/* A propos */
+
+.apropos {
+  min-height: 50vh;
+}
+.apropos article {
+  margin: 40px 50px 0 50px;
+}
+.apropos h2 {
+  text-align: center;
+  color: rgb(102, 39, 97);
+  padding: 20px;
+}
+.apropos p {
+  text-align: justify;
+}
+
+/* Mes Creations */
+
+.mescreations {
+  background-color:  rgb(255, 234, 208);
+  clear: both;
+}
+.mescreations h2 {
+  text-align: center;
+  color: rgb(102, 39, 97);
+  padding: 60px 0 20px 0;
+}
+.mescreations div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+.mescreations img {
+  width: 100%;
+  max-height: 300px;
+  flex-basis: 300px;
+  margin: 20px;
+  box-shadow: 1px 1px 10px rgba(77, 77, 77, 0.87);
+  border-radius: 20px;
+}
+
+/* Mes tarifs */
+
+.tarifs {
+  padding-bottom: 40px;
+}
+.tarifs h2 {
+  text-align: center;
+  color: rgb(102, 39, 97);
+  padding: 60px;
+}
+
+/* Contact */
+
+.contact {
+  background-color: rgb(255, 234, 208);
+}
+.contact div{
+  padding-bottom: 40px;
+}
+.contact h2{
+  text-align: center;
+  color: rgb(102, 39, 97);
+  padding: 60px 0 20px 0;
+}
+.contact-input {
+  display: flex;
+  flex-direction: column;
+  margin: 0 50px 0 50px;
+}
+.contact-input label{
+  padding-bottom: 5px;
+  padding-top: 30px;
+}
+.contact-input textarea{
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+.contact input, textarea{
+  border-radius: 6px;
+  padding: 9px;
+  border: transparent;
+}
+.condition {
+
+}
+.contact button {
+  margin-left: auto;
+  margin-right: auto;
+  padding:4px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 40px;
+  width: 100px;
+  align-content: center;
+}
+
+/* Footer */
+
+footer{
+  height: 70px;
+}
+footer p{
+  font-size: 14px;
+  padding: 30px 0 0 0;
+  text-align: center;
+  vertical-align: baseline;
+}
