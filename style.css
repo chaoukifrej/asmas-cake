@@ -153,7 +153,7 @@ header .entete {
 /* Mes Creations */
 
 .mescreations {
-  background-color:  rgb(255, 234, 208);
+  background-color: rgb(255, 234, 208);
   clear: both;
 }
 .mescreations h2 {
@@ -173,7 +173,7 @@ header .entete {
   flex-basis: 300px;
   margin: 20px;
   box-shadow: 1px 1px 10px rgba(77, 77, 77, 0.87);
-  border-radius: 20px;
+  border-radius: 20px 0 ;
 }
 
 /* Mes tarifs */
@@ -204,12 +204,13 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-.tarifs th, td, tr {
+.tarifs th,
+td,
+tr {
   text-align: center;
   padding: 12px 20px;
-
 }
-.tarifs p{
+.tarifs p {
   font-size: 16px;
   font-style: italic;
   text-align: center;
@@ -222,10 +223,10 @@ tr:nth-child(even) {
 .contact {
   background-color: rgb(255, 234, 208);
 }
-.contact div{
+.contact div {
   padding-bottom: 40px;
 }
-.contact h2{
+.contact h2 {
   text-align: center;
   color: rgb(102, 39, 97);
   padding: 60px 0 20px 0;
@@ -235,18 +236,19 @@ tr:nth-child(even) {
   flex-direction: column;
   margin: 0px 50px 0 50px;
 }
-.contact-input input:focus{
+.contact-input input:focus {
   box-shadow: 0px 0px 3px rgba(102, 39, 97, 0.4);
 }
-.contact-input textarea:focus{
+.contact-input textarea:focus {
   box-shadow: 0px 0px 3px rgba(102, 39, 97, 0.4);
 }
 
-.contact-input textarea{
+.contact-input textarea {
   margin-bottom: 30px;
   font-size: 14px;
 }
-.contact input, textarea{
+.contact input,
+textarea {
   border-radius: 6px;
   padding: 9px;
   border: transparent;
@@ -256,20 +258,34 @@ tr:nth-child(even) {
 .contact button {
   margin-left: auto;
   margin-right: auto;
-  padding:4px;
+  padding: 4px;
   margin-top: 10px;
   margin-bottom: 20px;
   height: 40px;
   width: 100px;
   align-content: center;
+  border: none;
+  border-radius: 6px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(102, 39, 97);
+  box-shadow: 0 0 3px rgba(102, 39, 97, 0.4);
+}
+.contact button:hover {
+  border: 2px solid white;
+
+}
+.contact button:active{
+  border: 2px solid white;
+  box-shadow: 0 0 4px rgba(102, 39, 97, 0.5);
+  transform: scale(95%);
 }
 
 /* Footer */
 
-footer{
+footer {
   height: 70px;
 }
-footer p{
+footer p {
   font-size: 14px;
   padding: 30px 0 0 0;
   text-align: center;
