@@ -46,6 +46,11 @@ p {
 
 /* Menu */
 
+.menu label,
+#hide-icon {
+  display: none;
+}
+
 .menu {
   position: sticky;
   background-color: rgb(255, 228, 193);
@@ -103,6 +108,50 @@ p {
 .menu-info i:hover {
   color: goldenrod;
   transition-duration: 0.2s;
+}
+
+/* Smartphone screen */
+@media screen and (max-width: 700px) {
+  .menu label {
+    display: inline-block;
+    color: rgb(73, 55, 9);
+    font-size: 1.2em;
+    padding: 10px;
+  }
+  .menu-nav {
+    display: none;
+    position: fixed;
+    top: 35px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgb(255, 228, 193);
+  }
+  .menu-nav ul {
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    margin: 0;
+  }
+  .menu-nav li {
+    display: flex;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .menu-nav a {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid rgb(73, 55, 9);
+  }
+
+  .menu input:checked ~ .menu-nav {
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
 }
 
 /* Header */
@@ -173,7 +222,7 @@ header .entete {
   flex-basis: 300px;
   margin: 20px;
   box-shadow: 1px 1px 10px rgba(77, 77, 77, 0.87);
-  border-radius: 20px 0 ;
+  border-radius: 20px 0;
 }
 
 /* Mes tarifs */
@@ -272,9 +321,8 @@ textarea {
 }
 .contact button:hover {
   border: 2px solid white;
-
 }
-.contact button:active{
+.contact button:active {
   border: 2px solid white;
   box-shadow: 0 0 4px rgba(102, 39, 97, 0.5);
   transform: scale(95%);
