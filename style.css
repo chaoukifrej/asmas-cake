@@ -13,6 +13,48 @@ p {
   font-size: 18px;
 }
 
+/* Animation */
+@keyframes fromleft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes fromright {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes fromtop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes frombottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromleft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /* Logo en tete */
 
 .logo {
@@ -24,12 +66,15 @@ p {
   height: 120px;
   margin: 20px;
   margin-left: 50px;
+  animation: fromtop 0.7s ease-out;
 }
 .logo-titre {
   display: inline;
   margin-left: 10px;
   margin-top: 30px;
+  animation: fromtop 0.7s ease-out;
 }
+
 .logo-titre h1 {
   font-size: 30px;
   margin-bottom: 2px;
@@ -69,6 +114,8 @@ p {
 .menu-nav ul {
   list-style: none;
   padding-left: 40px;
+  animation: fromleft 1s ease-out;
+
 }
 .menu-nav li {
   display: inline-block;
@@ -92,6 +139,7 @@ p {
   color: rgb(73, 55, 9);
   justify-content: space-around;
   padding-right: 20px;
+  animation: fromright 1s ease-out;
 }
 
 .menu-info p {
@@ -118,6 +166,8 @@ p {
     color: rgb(73, 55, 9);
     font-size: 1.2em;
     padding: 10px;
+    animation: fromleft 0.7s ease-out;
+
   }
   .menu-nav {
     display: none;
@@ -133,6 +183,7 @@ p {
     text-align: center;
     padding-left: 0;
     margin: 0;
+    animation: none;
   }
   .menu-nav li {
     display: flex;
@@ -178,6 +229,8 @@ header .entete {
   left:0;
   justify-content: center;
   font-family: "Libre Baskerville";
+  animation: fromleft 1s ease-in-out;
+
 }
 .entete h1 {
   margin: 140px 50px 10px;
@@ -223,7 +276,7 @@ header .entete {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 40px;
+  padding-bottom: 40px;  
 }
 .mescreations img {
   width: 100%;
