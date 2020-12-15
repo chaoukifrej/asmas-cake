@@ -59,7 +59,7 @@ p {
 
 .logo {
   display: flex;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   height: 160px;
 }
 .logo-image img {
@@ -98,9 +98,12 @@ p {
 
 .menu {
   position: sticky;
-  background-color: rgb(255, 228, 193);
-/*   background-image: linear-gradient(to left,rgb(163, 86, 182),rgb(255, 228, 193) );
- */  display: flex;
+  background-image: linear-gradient(
+    to left,
+    rgba(163, 86, 182, 0.9),
+    rgba(255, 228, 193, 0.9)
+  );
+  display: flex;
   height: 35px;
   top: 0;
   right: 0;
@@ -115,7 +118,6 @@ p {
   list-style: none;
   padding-left: 40px;
   animation: fromleft 1s ease-out;
-
 }
 .menu-nav li {
   display: inline-block;
@@ -131,7 +133,9 @@ p {
   padding: 0 12px;
 }
 .menu-nav a:hover {
-  color: goldenrod;
+  transform: translateY(1px);
+  transform: scale(97%);
+  color: rgb(112, 84, 12);
   transition-duration: 0.2s;
 }
 .menu-info {
@@ -155,7 +159,9 @@ p {
   color: rgb(73, 55, 9);
 }
 .menu-info i:hover {
-  color: goldenrod;
+  transform: translateY(1px);
+  transform: scale(97%);
+  color: rgb(112, 84, 12);
   transition-duration: 0.2s;
 }
 
@@ -167,7 +173,6 @@ p {
     font-size: 1.2em;
     padding: 10px;
     animation: fromleft 0.7s ease-out;
-
   }
   .menu-nav {
     display: none;
@@ -176,7 +181,11 @@ p {
     left: 0;
     right: 0;
     width: 100%;
-    background: rgb(255, 228, 193);
+    background-image: linear-gradient(
+      to left,
+      rgba(163, 86, 182, 0.9),
+      rgba(255, 228, 193, 0.9)
+    );
   }
   .menu-nav ul {
     list-style: none;
@@ -201,15 +210,13 @@ p {
     padding-right: 0px;
   }
 
-  .menu input:checked ~ 
-  .menu-nav {
+  .menu input:checked ~ .menu-nav {
     display: block;
   }
   .logo {
     display: none;
   }
 }
-
 
 /* Header */
 
@@ -226,11 +233,10 @@ header {
 header .entete {
   position: absolute;
   right: 0;
-  left:0;
+  left: 0;
   justify-content: center;
   font-family: "Libre Baskerville";
   animation: fromleft 1s ease-in-out;
-
 }
 .entete h1 {
   margin: 140px 50px 10px;
@@ -264,7 +270,7 @@ header .entete {
 
 .mescreations {
   background-color: rgb(255, 234, 208);
-/* background-image: linear-gradient(to top,rgb(86, 17, 104),rgb(255, 228, 193) ); */
+  /* background-image: linear-gradient(to top,rgb(86, 17, 104),rgb(255, 228, 193) ); */
   clear: both;
 }
 .mescreations h2 {
@@ -276,7 +282,7 @@ header .entete {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 40px;  
+  padding-bottom: 40px;
 }
 .mescreations img {
   width: 100%;
@@ -330,16 +336,16 @@ tr {
 }
 
 /* Smartphone screen */
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
   .tarifs th,
-td,
-tr {
-  padding: 10px 2px;
-  font-size: 14px;
-}
-.tarifs p {
-  font-size: 14px;
-}
+  td,
+  tr {
+    padding: 10px 2px;
+    font-size: 14px;
+  }
+  .tarifs p {
+    font-size: 14px;
+  }
 }
 
 /* Contact */
@@ -413,4 +419,126 @@ footer p {
   padding: 30px 0 0 0;
   text-align: center;
   vertical-align: baseline;
+}
+
+/* (----------------DARK-MODE-----------------) */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(42, 42, 42);
+    color: #fefefe;
+  }
+
+  /* Logo en tete */
+
+  .logo {
+    background-color: rgb(42, 42, 42);
+  }
+  .logo-titre h1 {
+    color: #fefefe;
+  }
+  .logo-titre p {
+    color: #fefefe;
+  }
+
+  /* Menu */
+
+  .menu {
+    background-image: linear-gradient(
+      to left,
+      rgba(82, 27, 95, 0.9),
+      rgba(128, 128, 128, 0.9)
+    );
+    box-shadow: 0px 5px 8px rgba(75, 75, 75, 0.521);
+  }
+  .menu-nav a {
+    color: #fefefe;
+  }
+  .menu-nav a:hover {
+    color: rgb(173, 164, 139);
+  }
+  .menu-info {
+    color: #fefefe;
+  }
+  .menu-info i {
+    color: #fefefe;
+  }
+  .menu-info i:hover {
+    color: rgb(173, 164, 139);
+  }
+
+  @media screen and (max-width: 700px) {
+    .menu label {
+      color: #fefefe;
+    }
+    .menu-nav {
+      background-image: linear-gradient(
+        to left,
+        rgba(82, 27, 95, 0.9),
+        rgba(128, 128, 128, 0.9)
+      );
+    }
+  }
+
+  .apropos h2 {
+    color: rgb(179, 73, 170);
+  }
+
+  /* Mes Creations */
+
+  .mescreations {
+    background-color: rgb(58, 58, 58);
+  }
+  .mescreations h2 {
+    color: rgb(179, 73, 170);
+  }
+  .mescreations img {
+    box-shadow: 1px 1px 10px rgba(26, 26, 26, 0.87);
+    filter: grayscale(20%);
+  }
+
+  /* Mes tarifs */
+
+  .tarifs h2 {
+    color: rgb(179, 73, 170);
+  }
+  .table-haut {
+    background-color: rgb(102, 39, 97);
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  tr:nth-child(even) {
+    background-color: #525252;
+  }
+
+  /* Contact */
+
+  .contact {
+    background-color: rgb(58, 58, 58);
+  }
+  .contact h2 {
+    color: rgb(179, 73, 170);
+  }
+  .contact-input input,
+  textarea {
+    background-color: #f0f0f0;
+  }
+  .contact-input input:focus {
+    box-shadow: 0px 0px 3px rgba(175, 70, 166, 0.883);
+  }
+  .contact-input textarea:focus {
+    box-shadow: 0px 0px 3px rgba(175, 70, 166, 0.883);
+  }
+  .contact button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(121, 47, 114);
+    box-shadow: 0 0 3px rgba(170, 65, 161, 0.4);
+  }
+  .contact button:hover {
+    border: 2px solid rgb(231, 231, 231);
+  }
+  .contact button:active {
+    border: 2px solid rgb(228, 228, 228);
+    box-shadow: 0 0 4px rgba(126, 49, 119, 0.5);
+  }
 }
